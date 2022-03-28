@@ -31,7 +31,7 @@ export class AppComponent implements OnInit {
       .then(() => console.log("Connection Started!"))
       .catch(err => console.log("Error while establishing a connection :( "));
 
-    this._hubConnection.on('ReceivedOrder', (data) => {
+    this._hubConnection.on('OrderMessage', (data) => {
       this.dataSet = data;
     })
   }
